@@ -6,5 +6,5 @@ Understand the basics of C syntax and structure.</br>
 Develop an understanding of memory management in C.</br>
 Build small projects to apply learned concepts.</br>
 ### Project Structure
-week0/ - first week of learning</br>
+week0/ - first week of learning basics of C, such as using command line arguments and using them in the small programs made for this week</br>
 week1/ - second week of learning</br>
