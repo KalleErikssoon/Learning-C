@@ -1,3 +1,4 @@
+// include input/output header file
 #include <stdio.h>
 
 //main function
@@ -45,9 +46,3 @@ int main(int argc, char *argsv[]) {
     ////return 0, indicating succesful execution of the program
     return 0;
 }
-/*
-Write a program that reads in an integer number between 1 and 5 from the keyboard and prints out one of
-existing five sentences on the console depending on what number was entered. You can invent the sentences
-as you want, but each sentence should be unique.
-The program continues to ask for a new number and exits if number isn ́t in the interval 1 to 5.
-*/
