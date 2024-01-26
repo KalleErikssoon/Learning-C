@@ -1,6 +1,6 @@
 # Learning C Programming
 ### Introduction
-This repository documents my journey in learning the C programming language and how this can be used in the current course I am taking, called "Development of Embedded and Real-Time Systems". It includes various exercises and projects I will make during this journey.
+This repository documents my journey in learning the C programming language and how this can be used in the current university course I am taking, called "Development of Embedded and Real-Time Systems". It includes various exercises and projects I will make during this journey.
 ### Goals and Objectives
 Understand the basics of C syntax and structure.</br>
 Develop an understanding of memory management in C.</br>
