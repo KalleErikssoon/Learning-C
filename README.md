@@ -8,5 +8,5 @@ Build small projects to apply learned concepts.</br>
 Understanding how programming in C can be used to develop embedded an real time systems.</br>
 ### Project Structure
 week0/ - Learning basics of C, such as using command line arguments and using them in the small programs made for this week</br>
-week1/ - Learning about various concepts in C, mainly about bitwise operators, arrays and pointers which were used in the programs made this week</br> 
+week1/ - Learning about various concepts in C, mainly about bitwise operators, arrays and pointers,</br> which were used in the programs made this week</br> 
 week2/ - Learning about structs and enums, as well as file operations (in this case on binary files), as well as more pointers, arrays, bitwise operators, and conversions between decimal, binary, and hexadecimal </br>
