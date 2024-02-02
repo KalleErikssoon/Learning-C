@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
         return 0;
     } else if(argc > 2) {
         printf("You can only provide 1 argument, enter -h as the command line argument for help");
-    } else if (*ptr != 0 || value > MAX_LONG) {
+    } else if (*ptr != 0 || value > MAX_LONG || value < 0) {
         printf("Not a valid digit, enter -h as the command line argument for help");
         return 0;
     }
