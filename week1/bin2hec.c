@@ -58,10 +58,12 @@ void calcAndPrint(char *binary) {
     for (int i = 0; i < length; i++) {
         // left shift bits of decimal varible by 1 (won't do anything first iteration)
         decimal <<= 1;
+        printf("iteration: %d decimal: %d\n", i, decimal);
         // checks if the current character in array equals 1
         if (binary[i] == '1') {
             //compare bit of decimal to corresponding bit of 1
             decimal |= 1;
+            printf("inside if iteration: %d decimal: %d\n", i, decimal);
         // checks if current character in array equals 0
         } else if (binary[i] != '0') {
             //do nothing

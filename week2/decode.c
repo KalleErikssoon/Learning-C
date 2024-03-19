@@ -87,7 +87,7 @@ void decToBinAndPrint(int firstDec, int secondDec) {    //void function that tak
     }
     if (gear_pos == -1 || key_pos == -1) {      // if the gear_pos or key_pos equal -1 (which is returned from the functions calcSecondNum and calcThirdNum) the input is not valid
         printf("Invalid input b, gear pos: %d, key_pos. %d\n", gear_pos, key_pos);
-        return;
+        return;     //return if the input is invalid
     } else {
     printf("Name     Value\n");
     printf("-----------------------------\n");
@@ -98,36 +98,36 @@ void decToBinAndPrint(int firstDec, int secondDec) {    //void function that tak
     printf("brake2 %d\n", brake2);
     }
 }
-int calcSecondNum(char num[4]) {
-    char strToCmp[3];
-    strToCmp[0] = num[1];
-    strToCmp[1] = num[2];
-    strToCmp[2] = num[3];
-    if(strncmp(strToCmp, "000", 3) == 0) {
-        return 0;
-    } else if(strncmp(strToCmp, "001", 3) == 0) {
-        return 1;
-    } else if(strncmp(strToCmp, "010", 3) == 0) {
-        return 2;
-    } else if(strncmp(strToCmp, "011", 3) == 0) {
-        return 3;
-    } else if (strncmp(strToCmp, "100", 3) == 0) {
-        return 4;
-    } else {
-        return -1;
+int calcSecondNum(char num[4]) {        //initialize calcSecondNUm function that returns an int and takes a char array as parameter   
+    char strToCmp[3];      //intialize char array to compare with strings 
+    strToCmp[0] = num[1];       //set comparison char array to value at index 1 of char array from parameter
+    strToCmp[1] = num[2];       //set comparison char array to value at index 2 of char array from parameter
+    strToCmp[2] = num[3];       //set comparison char array to value at index 3 of char array from parameter
+    if(strncmp(strToCmp, "000", 3) == 0) {       // checks if the char array and the string "000" are equal
+        return 0;       //return 0 (decimal value of second num)
+    } else if(strncmp(strToCmp, "001", 3) == 0) {            // checks if the char array and the string "001" are equal
+        return 1;       // return 1 (decimal value of second num)
+    } else if(strncmp(strToCmp, "010", 3) == 0) {      // checks if the char array and the string "010" are equal 
+        return 2;       //return 2 (decimal value of second num)
+    } else if(strncmp(strToCmp, "011", 3) == 0) {       // checks if the char array and the string "011" are equal
+        return 3;       //return 3 (decimal value of second num)
+    } else if (strncmp(strToCmp, "100", 3) == 0) {      // checks if the char array and the string "100" are equal
+        return 4;       //return 4 (decimal value of second num)
+    } else {        // else
+        return -1;      //return -1 if none of the above comparisons are equal to indicate there was no match found
     }
 }
-int calcThirdNum(char num[4]) {
-    char strToCmp[2];
-    strToCmp[0] = num[0];
-    strToCmp[1] = num[1];
-    if(strncmp(strToCmp, "00", 2) == 0) {
-        return 0;
-    } else if(strncmp(strToCmp, "01", 2) == 0) {
-        return 1;
-    } else if(strncmp(strToCmp, "10", 2) == 0) {
-        return 2;
-    } else {
-        return -1;
+int calcThirdNum(char num[4]) {     //initialize calcSecondNUm function that returns an int and takes a char array as parameter
+    char strToCmp[2];       //intialize char array to compare with strings
+    strToCmp[0] = num[0];   //set comparison char array to value at index 0 of char array from parameter
+    strToCmp[1] = num[1];   //set comparison char array to value at index 0 of char array from parameter
+    if(strncmp(strToCmp, "00", 2) == 0) {       // checks if the char array and the string "00" are equal
+        return 0;       //return 0 (decimal value of third num)
+    } else if(strncmp(strToCmp, "01", 2) == 0) {        // checks if the char array and the string "01" are equal
+        return 1;       //return 1 (decimal value of third num)
+    } else if(strncmp(strToCmp, "10", 2) == 0) {        // checks if the char array and the string "10" are equal
+        return 2;       //return 2 (decimal value for third num)
+    } else {        // else
+        return -1;      //return -1 if none of the above comparisons are equal to indicate there was no match found
     }
 }

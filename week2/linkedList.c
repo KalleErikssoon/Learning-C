@@ -77,6 +77,5 @@ REGTYPE *add_first(REGTYPE *temp, int data)
     newFirst->prev = NULL;
     newFirst->number = data;
     temp->prev = newFirst;
-    free(newFirst);
     return newFirst;
 }

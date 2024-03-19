@@ -1,32 +1,3 @@
-/*
-You should write a program to manage a database of persons. The database should be stored as a binary file
-(this is important – binary, not text file!). The structure of the program is easiest to understand by reading the
-description and the program skeleton below.
-From the main program you should be able to choose between these options:
-1 Create a new and delete the old file.
-2 Add a new person to the file.
-3 Search for a person in the file.
-4 Print out all in the file.
-5 Exit the program.
-After entered the choice the program executes the task and returns to the menu for new choices.
-1. Create a new and delete the old file.
-Program creates a new file with the specified filename (hardcoded, fixed) and writes a first dummy record to
-the file and then close it.
-2. Add a new person to the file.
-Gives an opportunity to put in one new person to a temp record and then add this record in
-the end of the file.
-3. Search for a person in the file.
-Gives you an opportunity to search for all persons with either a specified first name or
-family name (by choice). The program prints out all persons with that name.
-4. Print out all in file.
-Prints out the whole list
-5. Exit the program.
-Just exits the program.
-
-You should make the program fail-safe, in particular:
-• Checking if the file exists
-• Checking if the list is empty
-*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -92,9 +63,15 @@ int main(void){     //main function
 
 void write_new_file(PERSON *inrecord) {    // Creates a file and writes the first record, takes the address to a PERSON struct as parameter
     FILE* fileptr;      //initialize FILE pointer variable
+    if(fileptr = fopen(fileptr, "personDB" "wb") == NULL) {     //checks if 
+        printf("Couldn't write to file");
+        return;
+    } else {
     fileptr=fopen("personDB", "wb");        // set the fileptr variable to equal the fopen function, which takes the file name and wb as paramaters (wb meaning write to binary)
     fwrite(inrecord, sizeof(PERSON), 1, fileptr);       //use fwrite functino to write the passed parameter, with the size of a PERSON struct, the number 1 (number of elements), and the pointer to a FILE object output stream
     fclose(fileptr);        //close the file stream
+    }
+    fclose(fileptr);
 } 
 
 void printfile(void) {       // Prints out all persons in the file
