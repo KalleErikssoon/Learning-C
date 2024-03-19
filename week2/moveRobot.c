@@ -1,18 +1,23 @@
-enum DIRECTION {N, E, S, W};
-typedef struct {
-    int xpos;
-    int ypos;
-    enum DIRECTION dir;
+// (C)_Isaac Lindegren Ternbom, Karl Eriksson, Malte Bengtsson, group 20 (2024)
+// Work package 2
+// Exercise 1
+// Submission code: 202020
+
+enum DIRECTION {N, E, S, W};    //enums for the robot direction
+typedef struct {        //defintion of robot struct
+    int xpos;       // member xpos of robot struct
+    int ypos;       // member ypos of robot struct
+    enum DIRECTION dir;     //member dir of robot struct
 } ROBOT;
 
-#include <stdio.h>
-#include <string.h>
-#define MAX_STRING 20
+#include <stdio.h>      //include stdio header file for input/output
+#include <string.h>     //include string header file for string operations
+#define MAX_STRING 20       //define MAX_STRING to 20
 
-void move(ROBOT *robot);
-void turn(ROBOT *robot);
+void move(ROBOT *robot);        //initialize method move, takes pointer to robot struct as parameter 
+void turn(ROBOT *robot);        // initialize method turn, takes pointer to robot struct as parameter
 
-int main() {
+int main() {        //main function
 
     ROBOT robot;        //initilaize instance of ROBOT struct robot
     robot.dir = N;      // set robot direction to N
@@ -35,7 +40,7 @@ int main() {
             } else if(userInput[i] == 'x'){         // checks if the current character in the char array userInput is equal to x
                 userChoice = 'x';       //set the userChoice variable to character x
                 break;      //break out of the while loop
-            } else {
+            } else {        // else
                 ;       // do nothing
             }
         }

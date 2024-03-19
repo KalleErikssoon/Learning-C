@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     //// use strtol function to get int value of first argument
     value = strtol(argv[2], &ptr, 10);
     // checks if the value is larger than 4, less than 0, or if a part of the argument is not a number (in which case it is stored as ASCII value in the pointer)
-    if(value > 4 || *ptr != 0 || value < 0) {
+    if(value > 7 || *ptr != 0 || value < 0) {
         printf("Invalid input, needs to be an integer value between 0-4");
         //return 0, indicating succesful execution of the program
         return 0;
@@ -125,5 +125,5 @@ void calcAndPrint(int *binary) {
            ;
         }
     }
-    printf("Hexadecimal value: %X\n", decimal);
+    printf("Hexadecimal value: 0x%X\n", decimal);
 }
